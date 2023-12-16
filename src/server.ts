@@ -1,29 +1,29 @@
 import formbody from "@fastify/formbody";
 import fastifyView from "@fastify/view";
 import ejs from "ejs";
-import Fastify from "fastify";
-import routes from "./routes.js";
+import fastify from "fastify";
+import routes from "./routes";
 
-const fastify = Fastify({
+const server = fastify({
   logger: true,
 });
 
-fastify.register(fastifyView, {
+server.register(fastifyView, {
   engine: {
     ejs: ejs,
   },
   layout: "./templates/layout.ejs",
 });
 
-fastify.register(formbody);
+server.register(formbody);
 
-fastify.register(routes);
+server.register(routes);
 
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 });
+    await server.listen({ port: 3000 });
   } catch (err) {
-    fastify.log.error(err);
+    server.log.error(err);
     process.exit(1);
   }
 };
