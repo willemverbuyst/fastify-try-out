@@ -1,4 +1,4 @@
-> node --watch server
+> npm run dev
 
 > curl http://localhost:3000
 
