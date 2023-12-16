@@ -21,6 +21,7 @@
     "@types/node": "^20.10.4",
     "pino": "^8.17.1",
     "pino-pretty": "^10.3.0",
+    "prettier": "^3.1.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3"
   }

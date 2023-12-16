@@ -9,13 +9,13 @@ export default async function routes(
   server: FastifyInstance,
   _options: FastifyPluginOptions
 ) {
-  server.get("/", async function handler(request, _reply) {
+  server.get("/", async function handler() {
     return { ping: "pong" };
   });
-  server.get("/about", async function handler(request, reply) {
+  server.get("/about", async function handler(_request, reply) {
     return reply.view("./templates/about.ejs");
   });
-  server.get("/whoami", async function handler(request, reply) {
+  server.get("/whoami", async function handler(_request, reply) {
     return reply.view("./templates/whoami-form.ejs");
   });
   server.post(
