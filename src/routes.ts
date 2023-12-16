@@ -13,10 +13,10 @@ export default async function routes(
     return { ping: "pong" };
   });
   server.get("/about", async function handler(request, reply) {
-    return reply.view("../templates/about.ejs");
+    return reply.view("./templates/about.ejs");
   });
   server.get("/whoami", async function handler(request, reply) {
-    return reply.view("../templates/whoami-form.ejs");
+    return reply.view("./templates/whoami-form.ejs");
   });
   server.post(
     "/whoami",
@@ -40,7 +40,7 @@ export default async function routes(
       },
     },
     async function handler(request: FastifyRequest<{ Body: BodyType }>, reply) {
-      return reply.view("../templates/whoami.ejs", {
+      return reply.view("./templates/whoami.ejs", {
         name: request.body.name,
       });
     }
