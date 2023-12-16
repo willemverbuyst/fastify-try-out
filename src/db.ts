@@ -3,18 +3,18 @@ import { Low } from "lowdb";
 import { JSONFile } from "lowdb/node";
 
 export interface DbSchema {
-  names: string[];
+  visitors: string[];
 }
 
 interface LowDbPluginOptions {}
 
-export default fp<LowDbPluginOptions>(async (fastify, opts) => {
+export default fp<LowDbPluginOptions>(async (server) => {
   const adapter = new JSONFile<DbSchema>("db.json");
-  const db = new Low<DbSchema>(adapter, { names: [] });
+  const db = new Low<DbSchema>(adapter, { visitors: [] });
 
   await db.read();
-  db.data ||= { names: [] }; // Initialize data if empty
+  db.data ||= { visitors: [] }; // Initialize data if empty
   await db.write();
 
-  fastify.decorate("db", db);
+  server.decorate("db", db);
 });

@@ -30,7 +30,7 @@ export default async function whoAmIRoute(
     },
     async function handler(request: FastifyRequest<{ Body: BodyType }>, reply) {
       const name = request.body.name;
-      server.db.data.names.push(name);
+      server.db.data.visitors.push(name);
       return reply.view("./templates/who-am-i.ejs", {
         name,
       });

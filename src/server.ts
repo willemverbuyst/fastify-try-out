@@ -7,7 +7,7 @@ import pretty from "pino-pretty";
 
 import rootRoute from "./routes/root.routes";
 import aboutRoute from "./routes/about.routes";
-import namesRoute from "./routes/names.routes";
+import visitorsRoute from "./routes/visitors.routes";
 import whoAreYouRoute from "./routes/whoAreYou.routes";
 import whoAmIRoute from "./routes/whoAmI.routes";
 import lowDbPlugin, { DbSchema } from "./db";
@@ -36,6 +36,6 @@ server.register(formbody);
 
 server.register(rootRoute);
 server.register(aboutRoute);
-server.register(namesRoute);
+server.register(visitorsRoute);
 server.register(whoAreYouRoute);
 server.register(whoAmIRoute);
