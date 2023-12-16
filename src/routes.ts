@@ -26,11 +26,11 @@ export default async function routes(
   server.get("/names", async function handler() {
     return { names: db.data.names };
   });
-  server.get("/whoami", async function handler(_request, reply) {
-    return reply.view("./templates/whoami-form.ejs");
+  server.get("/who-are-you", async function handler(_request, reply) {
+    return reply.view("./templates/who-are-you.ejs");
   });
   server.post(
-    "/whoami",
+    "/who-am-i",
     {
       schema: {
         body: {
@@ -53,7 +53,7 @@ export default async function routes(
     async function handler(request: FastifyRequest<{ Body: BodyType }>, reply) {
       const name = request.body.name;
       db.data.names.push(name);
-      return reply.view("./templates/whoami.ejs", {
+      return reply.view("./templates/who-am-i.ejs", {
         name,
       });
     },
