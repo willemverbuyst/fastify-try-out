@@ -34,7 +34,9 @@ export default async function routes(fastify, options) {
       },
     },
     async function handler(request, reply) {
-      return { hello: request.query.name };
+      return reply.view("templates/whoami.ejs", {
+        name: request.query.name,
+      });
     }
   );
 }

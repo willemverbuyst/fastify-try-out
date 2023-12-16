@@ -1,8 +1,16 @@
+import fastifyView from "@fastify/view";
+import ejs from "ejs";
 import Fastify from "fastify";
 import routes from "./routes.js";
 
 const fastify = Fastify({
   logger: true,
+});
+
+fastify.register(fastifyView, {
+  engine: {
+    ejs: ejs,
+  },
 });
 
 fastify.register(routes);
