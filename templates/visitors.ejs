@@ -1,0 +1,12 @@
+<main class="p-5 flex flex-col justify-center items-center">
+    <section class="flex justify-center">
+        <h1 class="text-3xl font-bold text-clifford">Visitors</h1>
+    </section>
+    <section class="flex flex-col w-96">
+        <ul>
+            <% visitors.forEach(function(visitor) { %>
+                <li><%=visitor%></li>
+            <% }); %>
+        </ul>
+    </section>
+</main>
