@@ -2,10 +2,10 @@
   "name": "fastify-try-out",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/index.ts"
   },
   "keywords": [],
   "author": "Willem Verbuyst",
