@@ -11,6 +11,7 @@ fastify.register(fastifyView, {
   engine: {
     ejs: ejs,
   },
+  layout: "./templates/layout.ejs",
 });
 
 fastify.register(routes);
