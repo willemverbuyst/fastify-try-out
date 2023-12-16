@@ -10,19 +10,20 @@ export default async function routes(fastify, options) {
   fastify.get("/about", async function handler(request, reply) {
     return reply.view("templates/about.ejs");
   });
-  fastify.get(
+  fastify.get("/whoami", async function handler(request, reply) {
+    return reply.view("templates/whoami-form.ejs");
+  });
+  fastify.post(
     "/whoami",
     {
-      // request needs to have a querystring with a `name` parameter
       schema: {
-        querystring: {
+        body: {
           type: "object",
           properties: {
             name: { type: "string" },
           },
           required: ["name"],
         },
-        // the response needs to be an object with an `hello` property of type 'string'
         response: {
           200: {
             type: "object",
@@ -35,7 +36,7 @@ export default async function routes(fastify, options) {
     },
     async function handler(request, reply) {
       return reply.view("templates/whoami.ejs", {
-        name: request.query.name,
+        name: request.body.name,
       });
     }
   );

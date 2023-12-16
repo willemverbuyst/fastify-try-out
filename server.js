@@ -1,3 +1,4 @@
+import formbody from "@fastify/formbody";
 import fastifyView from "@fastify/view";
 import ejs from "ejs";
 import Fastify from "fastify";
@@ -13,6 +14,8 @@ fastify.register(fastifyView, {
   },
   layout: "./templates/layout.ejs",
 });
+
+fastify.register(formbody);
 
 fastify.register(routes);
 
