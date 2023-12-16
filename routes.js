@@ -8,7 +8,7 @@ export default async function routes(fastify, options) {
     return { ping: "pong" };
   });
   fastify.get("/about", async function handler(request, reply) {
-    return { info: "this is the about route" };
+    return reply.view("templates/about.ejs");
   });
   fastify.get(
     "/whoami",
