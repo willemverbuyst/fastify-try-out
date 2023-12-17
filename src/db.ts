@@ -1,9 +1,9 @@
+import { faker } from "@faker-js/faker";
 import fp from "fastify-plugin";
 import { Low } from "lowdb";
 import { JSONFile } from "lowdb/node";
-import { faker } from "@faker-js/faker";
 
-type Visitor = {
+export type Visitor = {
   firstName: string;
   lastName: string;
   age: number;
