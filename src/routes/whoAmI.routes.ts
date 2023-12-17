@@ -46,6 +46,10 @@ export default async function whoAmIRoute(
 
       return reply.view("./templates/who-am-i.ejs", {
         firstName,
+        lastName,
+        age,
+        jobType,
+        sexType,
       });
     },
   );
