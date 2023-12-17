@@ -1,7 +1,8 @@
+import { Visitor } from "db";
 import type { FastifyRequest } from "fastify";
 import { FastifyInstance, FastifyPluginOptions } from "fastify";
 
-type BodyType = { name: string };
+type BodyType = Visitor;
 
 export default async function whoAmIRoute(
   server: FastifyInstance,
@@ -14,9 +15,13 @@ export default async function whoAmIRoute(
         body: {
           type: "object",
           properties: {
-            name: { type: "string" },
+            firstName: { type: "string" },
+            lastName: { type: "string" },
+            age: { type: "string" },
+            jobType: { type: "string" },
+            sexType: { type: "string" },
           },
-          required: ["name"],
+          required: ["firstName", "lastName", "age", "jobType", "sexType"],
         },
         response: {
           200: {
@@ -29,10 +34,22 @@ export default async function whoAmIRoute(
       },
     },
     async function handler(request: FastifyRequest<{ Body: BodyType }>, reply) {
-      const name = request.body.name;
-      server.db.data.visitors.push(name);
+      const { firstName, lastName, age, jobType, sexType } = request.body;
+
+      server.db.data.visitors.push({
+        firstName,
+        lastName,
+        age,
+        jobType,
+        sexType,
+      });
+
       return reply.view("./templates/who-am-i.ejs", {
-        name,
+        firstName,
+        lastName,
+        age,
+        jobType,
+        sexType,
       });
     },
   );

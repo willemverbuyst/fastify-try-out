@@ -1,5 +1,9 @@
-<main class="p-5">
-  <section class="flex justify-center">
-    <h1 class="text-3xl font-bold text-clifford">Hello <%= name %></h1>
+<main class="p-5 flex flex-col justify-center items-center">
+  <section>
+    <h1 class="text-3xl font-bold text-clifford">
+      Hello <%= firstName %> <%= lastName %>
+    </h1>
+    <p>You are a <%= sexType %> of <%= age %> <%if (age <2) {%>year<%}%><%if (age >1) {%>years<%}%> old</p>
+    <p>Your job is <%= jobType %></p>
   </section>
 </main>

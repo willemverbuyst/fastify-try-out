@@ -1,0 +1,25 @@
+<main class="p-5 flex flex-col justify-center items-center">
+    <section class="flex justify-center">
+        <h1 class="text-3xl font-bold text-clifford">Visitors</h1>
+    </section>
+    <section class="flex flex-col">
+        <table>
+            <tr>
+                <th>first name</th>
+                <th>last name</th>
+                <th>age</th>
+                <th>job type</th>
+                <th>sex</th>
+            </tr>
+            <% visitors.forEach(function(visitor) { %>
+                <tr>
+                    <td><%=visitor.firstName%></td>
+                    <td><%=visitor.lastName%></td>
+                    <td><%=visitor.age%></td>
+                    <td><%=visitor.jobType%></td>
+                    <td><%=visitor.sexType%></td>
+                </tr>
+            <% }); %>
+        </table>
+    </section>
+</main>

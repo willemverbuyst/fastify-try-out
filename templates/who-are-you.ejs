@@ -8,16 +8,81 @@
       action="/who-am-i"
       method="post"
     >
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-        Name
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        id="name"
-        type="text"
-        name="name"
-        placeholder="enter your name here"
-      />
+      <section>
+        <label
+          class="block text-gray-700 text-sm font-bold mb-2"
+          for="firstName"
+        >
+          First name
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="firstName"
+          type="text"
+          name="firstName"
+          placeholder="enter your first name here"
+        />
+      </section>
+      <section>
+        <label
+          class="block text-gray-700 text-sm font-bold mb-2"
+          for="lastName"
+        >
+          Last name
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="lastName"
+          type="text"
+          name="lastName"
+          placeholder="enter your last name here"
+        />
+      </section>
+      <section>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+          Age
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="age"
+          type="number"
+          name="age"
+          min="0"
+          max="120"
+          placeholder="0"
+        />
+      </section>
+      <section>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="jobType">
+          Job
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="jobType"
+          type="text"
+          name="jobType"
+          placeholder="enter your job type here"
+        />
+      </section>
+      <section>
+        <fieldset>
+          <legend class="block text-gray-700 text-sm font-bold mb-2">
+            Select your sex:
+          </legend>
+          <section>
+            <input id="sex-female" type="radio" name="sexType" value="female" />
+            <label class="text-gray-500 text-sm mb-2" for="sex-female">
+              female
+            </label>
+          </section>
+          <section>
+            <input id="sex-male" type="radio" name="sexType" value="male" />
+            <label class="text-gray-500 text-sm mb-2" for="sex-male">
+              male
+            </label>
+          </section>
+        </fieldset>
+      </section>
       <button
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         type="submit"
