@@ -3,21 +3,21 @@
         <h1 class="text-3xl font-bold text-clifford">Visitors</h1>
     </section>
     <section class="flex flex-col">
-        <table>
+        <table class="table-auto">
             <tr>
-                <th>first name</th>
-                <th>last name</th>
-                <th>age</th>
-                <th>job type</th>
-                <th>sex</th>
+                <th class="px-6 py-2 text-left">first name</th>
+                <th class="px-6 py-2 text-left">last name</th>
+                <th class="px-6 py-2 text-right">age</th>
+                <th class="px-6 py-2 text-left">job type</th>
+                <th class="px-6 py-2 text-left">sex</th>
             </tr>
             <% visitors.forEach(function(visitor) { %>
                 <tr>
-                    <td><%=visitor.firstName%></td>
-                    <td><%=visitor.lastName%></td>
-                    <td><%=visitor.age%></td>
-                    <td><%=visitor.jobType%></td>
-                    <td><%=visitor.sexType%></td>
+                    <td class="px-6 py-2 text-left"><%=visitor.firstName%></td>
+                    <td class="px-6 py-2 text-left"><%=visitor.lastName%></td>
+                    <td class="px-6 py-2 text-right"><%=visitor.age%></td>
+                    <td class="px-6 py-2 text-left"><%=visitor.jobType%></td>
+                    <td class="px-6 py-2 text-left"><%=visitor.sexType%></td>
                 </tr>
             <% }); %>
         </table>
