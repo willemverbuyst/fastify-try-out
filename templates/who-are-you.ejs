@@ -1,22 +1,22 @@
-<main class="p-5 flex flex-col justify-center items-center">
+<main class="flex flex-col items-center justify-center p-5">
   <section class="flex justify-center">
-    <h1 class="text-3xl font-bold text-clifford">Who are you?</h1>
+    <h1 class="text-clifford text-3xl font-bold">Who are you?</h1>
   </section>
   <section class="w-full max-w-xs p-5">
     <form
-      class="bg-white shadow-md rounded px-8 pt-6 pb-8 flex flex-col gap-3"
+      class="flex flex-col gap-3 rounded bg-white px-8 pt-6 pb-8 shadow-md"
       action="/who-am-i"
       method="post"
     >
       <section>
         <label
-          class="block text-gray-700 text-sm font-bold mb-2"
+          class="mb-2 block text-sm font-bold text-gray-700"
           for="firstName"
         >
           First name
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           id="firstName"
           type="text"
           name="firstName"
@@ -25,13 +25,13 @@
       </section>
       <section>
         <label
-          class="block text-gray-700 text-sm font-bold mb-2"
+          class="mb-2 block text-sm font-bold text-gray-700"
           for="lastName"
         >
           Last name
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           id="lastName"
           type="text"
           name="lastName"
@@ -39,11 +39,11 @@
         />
       </section>
       <section>
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+        <label class="mb-2 block text-sm font-bold text-gray-700" for="age">
           Age
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           id="age"
           type="number"
           name="age"
@@ -53,11 +53,11 @@
         />
       </section>
       <section>
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="jobType">
+        <label class="mb-2 block text-sm font-bold text-gray-700" for="jobType">
           Job
         </label>
         <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           id="jobType"
           type="text"
           name="jobType"
@@ -66,25 +66,25 @@
       </section>
       <section>
         <fieldset>
-          <legend class="block text-gray-700 text-sm font-bold mb-2">
+          <legend class="mb-2 block text-sm font-bold text-gray-700">
             Select your sex:
           </legend>
           <section>
             <input id="sex-female" type="radio" name="sexType" value="female" />
-            <label class="text-gray-500 text-sm mb-2" for="sex-female">
+            <label class="mb-2 text-sm text-gray-500" for="sex-female">
               female
             </label>
           </section>
           <section>
             <input id="sex-male" type="radio" name="sexType" value="male" />
-            <label class="text-gray-500 text-sm mb-2" for="sex-male">
+            <label class="mb-2 text-sm text-gray-500" for="sex-male">
               male
             </label>
           </section>
         </fieldset>
       </section>
       <button
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        class="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
         type="submit"
       >
         Submit
